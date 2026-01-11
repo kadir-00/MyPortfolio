@@ -1,0 +1,96 @@
+﻿@model List<Admin>
+<div class="sidebar">
+	<div class="scrollbar-inner sidebar-wrapper">
+		@foreach (var item in Model)
+		{
+			<div class="user">
+				<div class="photo">
+					<img src="@item.ImageUrl">
+				</div>
+				<div class="info">
+					<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+						<span>
+							@item.NameSurname
+							<span class="user-level">@item.Email</span>
+						</span>
+					</a>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		}
+		<ul class="nav">
+			<li class="nav-item">
+				<a href="/Statistic/Index">
+					<i class="la la-bar-chart"></i>
+					<p>İstatistikler</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/Default/Index/">
+					<i class="la la-home"></i>
+					<p>Siteye Git</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/About/Index/">
+					<i class="la la-user-plus"></i>
+					<p>Hakkımda</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/ToDoList/Index/">
+					<i class="la la-check-square"></i>
+					<p>Yapılacaklar</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/Experience/ExperienceList/">
+					<i class="la la-briefcase"></i>
+					<p>Deneyimler</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/Contact/Index/">
+					<i class="la la-phone"></i>
+					<p>İletişim Bilgileri</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/Portfolio/Index/">
+					<i class="la la-clipboard"></i>
+					<p>Projelerim</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/Skill/Index/">
+					<i class="la la-cogs"></i>
+					<p>Yeteneklerim</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/Testimonial/Index/">
+					<i class="la la-comments"></i>
+					<p>Referanslarım</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/SocialMedia/Index/">
+					<i class="la la-share-alt"></i>
+					<p>Sosyal Medya</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/Message/Inbox/">
+					<i class="la la-inbox"></i>
+					<p>Gelen Kutusu</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/Login/Logout/">
+					<i class="la la-sign-out"></i>
+					<p>Çıkış Yap</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
