@@ -1,14 +1,17 @@
 ﻿@model List<Admin>
-<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="@ViewBag.photo" alt="user-img" width="36" class="img-circle"><span>Admin</span></a>
+<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img
+        src="/userimage/@ViewBag.photo" alt="user-img" width="36" class="img-circle"><span>Admin</span></a>
 <ul class="dropdown-menu dropdown-user">
     @foreach (var item in Model)
+
     {
         <li>
             <div class="user-box">
-                <div class="u-img"><img src="@item.ImageUrl" alt="user"></div>
+                <div class="u-img"><img src="/userimage/@item.ImageUrl" alt="user"></div>
                 <div class="u-text">
                     <h4>@item.NameSurname</h4>
-                    <p class="text-muted">@item.Email</p><a href="#" class="btn btn-rounded btn-danger btn-sm">Mesaj Gönder</a>
+                    <p class="text-muted">@item.Email</p><a href="#" class="btn btn-rounded btn-danger btn-sm">Mesaj
+                        Gönder</a>
                 </div>
             </div>
         </li>
