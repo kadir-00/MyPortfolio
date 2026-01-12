@@ -1,6 +1,7 @@
 ﻿@model List<Skill>
 @{
     ViewData["Title"] = "Index";
+
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
@@ -29,13 +30,21 @@
                             </thead>
                             <tbody>
                                 @foreach (var item in Model)
+
                                 {
                                     <tr>
                                         <td>@item.SkillId</td>
                                         <td>@item.Title</td>
-                                        <td>@item.Value</td>
-                                        <td><a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-danger btn-sm">Sil</a></td>
-                                        <td><a href="/Skill/UpdateSkill/@item.SkillId" class="btn btn-success btn-sm">Güncelle</a></td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: @item.Value%"
+                                                    aria-valuenow="@item.Value" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                        <td><a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-danger btn-sm">Sil</a>
+                                        </td>
+                                        <td><a href="/Skill/UpdateSkill/@item.SkillId"
+                                                class="btn btn-success btn-sm">Güncelle</a></td>
                                     </tr>
                                 }
                             </tbody>

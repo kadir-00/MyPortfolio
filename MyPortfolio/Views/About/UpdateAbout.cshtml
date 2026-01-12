@@ -1,6 +1,7 @@
 ﻿@model About
 @{
     ViewData["Title"] = "UpdateAbout";
+
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
@@ -14,7 +15,7 @@
                         <div class="card-title">Hakkımda Güncelle</div>
                     </div>
                     <div class="card-body">
-                        <form method="post">
+                        <form method="post" enctype="multipart/form-data">
                             <input type="hidden" asp-for="AboutId" />
                             <label>Başlık</label>
                             <input type="text" asp-for="Title" class="form-control mb-2" />
@@ -24,6 +25,9 @@
 
                             <label>Detay</label>
                             <input type="text" asp-for="Details" class="form-control mb-2" />
+
+                            <label>Resim</label>
+                            <input type="file" name="image" class="form-control mb-2" />
 
                             <button class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i>

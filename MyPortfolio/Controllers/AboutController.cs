@@ -24,9 +24,19 @@ namespace MyPortfolio.Controllers
             return View(value);
         }
         [HttpPost]
-        public IActionResult UpdateAbout(About about)
+        public async Task<IActionResult> UpdateAbout(About about, IFormFile image)
         {
-            var value = context.Abouts.Update(about);
+            if (image != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(image.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/hola-master/images/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await image.CopyToAsync(stream);
+                about.ImageUrl = imageName;
+            }
+            context.Abouts.Update(about);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
