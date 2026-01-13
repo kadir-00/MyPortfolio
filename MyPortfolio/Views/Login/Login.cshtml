@@ -1,37 +1,150 @@
 ﻿@model MyPortfolio.Models.LoginViewModel
-
 @{
     Layout = null;
 }
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="~/login/style.css">
-</head>
-<body>
-    <section class="container">
-        <div class="login-container">
-            <div class="circle circle-one"></div>
-            <div class="form-container">
-                <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
-                <h1 class="opacity">Giriş</h1>
-                <form method="post">
-                    <input type="text" asp-for="Email" placeholder="Email" class="form-control" required />
-                    <input type="password" asp-for="Password" placeholder="Şifre" class="form-control" required />
-                    <button type="submit" class="opacity">Giriş</button>
-                </form>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Giriş</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
-                {
-                    <div class="text-danger">@error.ErrorMessage</div>
-                }
-            </div>
-            <div class="circle circle-two"></div>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+        }
+
+        .login-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-header {
+            margin-bottom: 2rem;
+        }
+
+        .login-header h1 {
+            color: #333;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+
+        .form-control:focus {
+            border-color: #fbc2eb;
+            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(251, 194, 235, 0.1);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(161, 140, 209, 0.4);
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+        }
+
+        .text-danger {
+            color: #ff6b6b;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: block;
+        }
+
+        .illustration {
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-card">
+        <div class="login-header">
+            <h1>Hoşgeldiniz</h1>
+            <p>Admin paneline erişmek için giriş yapın</p>
         </div>
-        <div class="theme-btn-container"></div>
-    </section>
-    <script src="~/login/script.js"></script>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="Email">Email Adresi</label>
+                <input type="text" asp-for="Email" class="form-control" placeholder="admin@gmail.com" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Password">Şifre</label>
+                <input type="password" asp-for="Password" class="form-control" placeholder="******" required />
+            </div>
+
+            <button type="submit" class="btn-login">Giriş Yap</button>
+        </form>
+
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+
+        {
+            <div class="text-danger">@error.ErrorMessage</div>
+        }
+    </div>
 </body>
+
 </html>

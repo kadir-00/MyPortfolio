@@ -22,7 +22,8 @@ namespace MyPortfolio.Controllers
 			ViewBag.v7 = context.SocialMedias.Count();
 			ViewBag.v8 = context.ToDoLists.Count(); //kaç adet işlem var ? 
 			ViewBag.v9 = context.Testimonials.Count(); // kaç referans var
-			return View();
+			var values = context.ToDoLists.ToList();
+			return View(values);
 		}
 	}
 }
