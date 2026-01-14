@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
@@ -22,20 +23,40 @@
                                     <th scope="col">Başlık</th>
                                     <th scope="col">Alt Açıklama</th>
                                     <th scope="col">Detay</th>
+                                    <th scope="col">Durum</th>
                                     <th scope="col">Güncelle</th>
                                 </tr>
                             </thead>
                             <tbody>
 
                                 @foreach (var item in Model)
+
                                 {
 
                                     <tr>
                                         <td>@item.AboutId</td>
                                         <td>@item.Title</td>
-                                        <td>@(item.SubDescription.Length > 90 ? item.SubDescription.Substring(0, 90) + "..." : item.SubDescription)</td>
-                                        <td>@(item.Details.Length > 90 ? item.Details.Substring(0, 90) + "..." : item.Details)</td>
-                                        <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-success btn-sm">Güncelle</a></td>
+                                        <td>@(item.SubDescription.Length > 90 ? item.SubDescription.Substring(0, 90) + "..."
+                                                : item.SubDescription)</td>
+                                        <td>@(item.Details.Length > 90 ? item.Details.Substring(0, 90) + "..." :
+                                                item.Details)</td>
+                                        <td>
+                                            @if (item.Status == true)
+
+                                            {
+                                                <a href="/About/ChangeStatus/@item.AboutId"
+                                                    class="btn btn-outline-primary btn-sm">Aktif</a>
+                                            }
+
+                                            else
+
+                                            {
+                                                <a href="/About/ChangeStatus/@item.AboutId"
+                                                    class="btn btn-outline-danger btn-sm">Pasif</a>
+                                            }
+                                        </td>
+                                        <td><a href="/About/UpdateAbout/@item.AboutId"
+                                                class="btn btn-success btn-sm">Güncelle</a></td>
                                     </tr>
                                 }
                             </tbody>

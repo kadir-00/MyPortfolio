@@ -40,5 +40,19 @@ namespace MyPortfolio.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult ChangeStatus(int id)
+        {
+            var value = context.Abouts.Find(id);
+            if (value.Status == true)
+            {
+                value.Status = false;
+            }
+            else
+            {
+                value.Status = true;
+            }
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

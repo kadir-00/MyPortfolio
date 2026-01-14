@@ -7,5 +7,6 @@
         public string SubDescription { get; set; }
         public string Details { get; set; }
         public string ImageUrl { get; set; }
+        public bool Status { get; set; }
     }
 }
