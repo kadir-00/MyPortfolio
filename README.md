@@ -1,44 +1,76 @@
-## 🎓 Asp.Net Core ile Portfolyo Uygulamanızı Geliştirin Kursu Kapsamında Gelitriğim Dinamik Portfolyo Sitem
+# MyPortfolio
 
-Dinamik Portfolyo Web Sitesi projemi sizlerle paylaşmaktan mutluluk duyuyorum. Bu projeyi, Udemy'de Murat Yücedağ hocamızın, 2 part halinde ücretsiz olarak sunduğu "Asp.Net Core ile Portfolyo Uygulamanızı Geliştirin" kursu kapsamında geliştirdim.​
+MyPortfolio, yeteneklerinizi, deneyimlerinizi ve projelerinizi sergileyebileceğiniz, aynı zamanda dinamik bir yönetim paneli içeren, **ASP.NET Core 6.0** ile geliştirilmiş kapsamlı bir kişisel portföy web uygulamasıdır.
 
-### 🚀 Proje Hakkında
-Projem, kişisel becerilerimi, deneyimlerimi ve projelerimi sergileyebileceğim dinamik bir portfolyo web sitesi oluşturmayı amaçlamaktadır. ASP.NET Core, C#, HTML, CSS, SQL ve Entity Framework kullanarak, var olan bilgilerimi pekiştirmeyi ve ilerletmeyi hedefledim. Site üzerinden CV'mi indirebilir, LinkedIn ve GitHub gibi sosyal medya hesaplarıma kolayca ulaşabilirsiniz. Bootstrap ile tasarlanan şık ve mobil uyumlu arayüzü sayesinde kullanıcı dostu bir deneyim sunmaktadır.​
+## 🚀 Proje Hakkında
 
-### 🛠️ Kullanılan Teknolojiler
-### 🏗️ Backend:
-✅ C#: Sunucu tarafı programlama dili olarak kullanıldı.​
+Bu proje, kişisel markanızı oluşturmak ve yönetmek için modern bir arayüz ve güçlü bir arka uç sunar. Ziyaretçiler portföyünüzü inceleyip sizinle iletişime geçebilirken, siz de gelişmiş **Admin Paneli** üzerinden tüm içerikleri (Yetenekler, Deneyimler, Referanslar vb.) kolayca yönetebilirsiniz.
 
-🌐 ASP.NET Core: Web uygulaması çatısı olarak tercih edildi.​
+## ✨ Özellikler
 
-🗄️ Entity Framework - Code First: Veritabanı yönetimi ve modelleme için kullanıldı.​
+### 🌍 Arayüz (Public UI)
+*   **Ana Sayfa**: Genel tanıtım ve özet bilgiler.
+*   **Hakkımda**: Kişisel bilgiler ve tanıtım yazısı.
+*   **Yetenekler**: İlerleme çubukları (progress bars) ile görselleştirilmiş yetenek listesi.
+*   **Deneyimler**: Zaman çizelgesi veya liste formatında iş/eğitim deneyimleri.
+*   **Projeler/Portföy**: Tamamlanan projelerin görselleri ve detayları.
+*   **Referanslar**: Müşteri veya iş arkadaşlarından gelen yorumlar.
+*   **İletişim**: Ziyaretçilerin size ulaşabileceği mesaj formu.
 
-⚡ SQL Server: Veritabanı yönetim sistemi olarak kullanıldı.​
+### 🛠 Yönetim Paneli (Admin Dashboard)
+*   **Dashboard**: Genel bakış, istatistikler ve hızlı erişim kartları.
+*   **İstatistikler**: Portföy verilerine dair grafiksel veya sayısal analizler.
+*   **İçerik Yönetimi**: Hakkımda, Yetenekler, Deneyimler, Projeler, Hizmetler ve Referanslar için Ekleme/Silme/Güncelleme (CRUD) işlemleri.
+*   **Mesaj Kutusu**: İletişim formundan gelen mesajları görüntüleme ve yönetme.
+*   **To-Do Listesi**: Kişisel yapılacaklar listesi notları.
+*   **Profil Yönetimi**: Admin kullanıcı bilgileri ve şifre güncellemeleri.
+*   **Bildirimler**: İşlem durumları ve uyarılar.
 
-### 🔗 Frontend:
+## 🧰 Teknolojiler ve Araçlar
 
-🧩 HTML: Sayfa yapılarının oluşturulmasında kullanıldı.​
+*   **Platform**: .NET 6.0
+*   **Framework**: ASP.NET Core MVC
+*   **Veritabanı**: MSSQL (Microsoft SQL Server)
+*   **ORM**: Entity Framework Core (Code First Yaklaşımı)
+*   **Frontend**: HTML5, CSS3, JavaScript
+*   **CSS Framework**: Bootstrap (Admin: Ready Bootstrap Dashboard, UI: Özel Temalar)
+*   **Kütüphaneler**: 
+    *   FluentValidation (Doğrulama işlemleri için)
+    *   Toastr / SweetAlert (Bildirimler için)
 
-🗃️ CSS: Sayfa stillerinin ve düzeninin belirlenmesinde kullanıldı.​
+## 🌟 Öne Çıkan Özellikler
 
-🛣️ Bootstrap 5: Responsive ve modern arayüz tasarımı için tercih edildi.​
+Projenin geliştirilme sürecinde modern yazılım prensipleri ve verimlilik odaklı teknikler ön planda tutulmuştur:
 
-### 📋 Öne Çıkan Özellikler
+*   **🧩 Partial Components (Parçalı Bileşen Yapısı)**: 
+    Sayfa içerisindeki modüller (Header, Footer, Navbar vb.) birbirinden bağımsız `ViewComponent` ve `PartialView` yapıları kullanılarak parçalanmıştır. Bu sayede:
+    *   Kod tekrarı önlenmiş,
+    *   Yönetilebilirlik ve bakım kolaylığı artırılmış,
+    *   Daha temiz ve okunabilir bir HTML/CSHTML yapısı elde edilmiştir.
 
-🔖 Partial Component Kullanımı: Dinamik ve modüler içerik yapısı oluşturuldu.​
+*   **🏗️ Code First Yaklaşımı**:
+    Veritabanı mimarisi, tamamen C# sınıfları (Entity'ler) üzerinden kurgulanmıştır. Entity Framework Core'un **Code First** yaklaşımı sayesinde:
+    *   Veritabanı bağımlılığı en aza indirilmiş,
+    *   Gelişmiş migration yapısı ile veritabanı güncellemeleri kolayca yönetilebilir hale gelmiştir.
 
-🔖 Code First ile Veritabanı Yönetimi: Entity Framework ile esnek ve yönetilebilir bir veri yapısı sağlandı.​
+*   **🎨 Modern ve Kullanıcı Odaklı Tasarım**:
+    *   UI tarafında kullanıcı deneyimini (UX) artıran, pastel tonların hakim olduğu, şık ve minimal bir tasarım dili kullanılmıştır.
+    *   Admin panelinde ise verimliliği artıran, responsive (mobil uyumlu) ve profesyonel bir dashboard teması tercih edilmiştir.
 
-🔖 Modern Tasarım: Mobil uyumlu ve estetik arayüz ile kullanıcı dostu bir deneyim sunuldu.​
 
-### 📡 Proje Süreci ve Öğrenilenler
-Proje sürecinde, ASP.NET Core kullanarak web uygulamaları geliştirme, SQL veritabanı entegrasyonu ve yönetimi, HTML, CSS ve Bootstrap ile kullanıcı arayüzü tasarımı, MVC (Model-View-Controller) mimarisi, View Component'ler ile modüler yapı oluşturma ve Code First yaklaşımı ile Migration işlemleri konularında bilgi ve deneyim kazandım.​
+## 🔐 Kullanım
 
-### 🔎 Proje Görselleri
+*   **Admin Girişi**: Yönetim paneline erişmek için `/Login` rotasını kullanın. (İlk kurulumda veritabanında bir admin kullanıcısı oluşturmanız gerekebilir veya seed data kontrol edilmelidir).
+*   **Veri Yönetimi**: Admin paneline giriş yaptıktan sonra sol menüden ilgili sekmelere giderek içeriklerinizi düzenlemeye başlayabilirsiniz.
 
-![Image](https://github.com/user-attachments/assets/121dc859-1284-4beb-8279-50b4df53b875)
-![Image](https://github.com/user-attachments/assets/4a53f82c-27f8-4cce-9bed-ac7d88d6854b)
-![Image](https://github.com/user-attachments/assets/92bbdf3f-1fe0-4d87-acf6-333ede2da931)
-![Image](https://github.com/user-attachments/assets/0908455a-0c47-4c01-b92b-44ab0e010657)
-![Image](https://github.com/user-attachments/assets/8100cc2f-1858-4f84-be6a-423836568af0)
-![Image](https://github.com/user-attachments/assets/5fc93652-3251-43ea-aa05-2aa6f84deb4f)
+## 🤝 Katkıda Bulunma
+
+1.  Bu projeyi forklayın.
+2.  Yeni bir özellik dalı (feature branch) oluşturun (`git checkout -b ozellik/YeniOzellik`).
+3.  Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik eklendi'`).
+4.  Dalınızı pushlayın (`git push origin ozellik/YeniOzellik`).
+5.  Bir Pull Request (PR) oluşturun.
+
+## 📄 Lisans
+
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
