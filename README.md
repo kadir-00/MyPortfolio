@@ -1,4 +1,4 @@
-# MyPortfolio
+# Asp.Net Core ile Dinamik MyPortfolio Sitem
 
 MyPortfolio, yeteneklerinizi, deneyimlerinizi ve projelerinizi sergileyebileceğiniz, aynı zamanda dinamik bir yönetim paneli içeren, **ASP.NET Core 6.0** ile geliştirilmiş kapsamlı bir kişisel portföy web uygulamasıdır.
 
@@ -57,20 +57,35 @@ Projenin geliştirilme sürecinde modern yazılım prensipleri ve verimlilik oda
     *   UI tarafında kullanıcı deneyimini (UX) artıran, pastel tonların hakim olduğu, şık ve minimal bir tasarım dili kullanılmıştır.
     *   Admin panelinde ise verimliliği artıran, responsive (mobil uyumlu) ve profesyonel bir dashboard teması tercih edilmiştir.
 
+---
 
-## 🔐 Kullanım
+## 👏 Teşekkür
+Bu projenin geliştirilmesindeki katkıları ve rehberliği için **Murat Yücedağ** hocama teşekkür ederim.
 
-*   **Admin Girişi**: Yönetim paneline erişmek için `/Login` rotasını kullanın. (İlk kurulumda veritabanında bir admin kullanıcısı oluşturmanız gerekebilir veya seed data kontrol edilmelidir).
-*   **Veri Yönetimi**: Admin paneline giriş yaptıktan sonra sol menüden ilgili sekmelere giderek içeriklerinizi düzenlemeye başlayabilirsiniz.
+---
 
-## 🤝 Katkıda Bulunma
+## 📸 Proje Arayüzleri
 
-1.  Bu projeyi forklayın.
-2.  Yeni bir özellik dalı (feature branch) oluşturun (`git checkout -b ozellik/YeniOzellik`).
-3.  Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik eklendi'`).
-4.  Dalınızı pushlayın (`git push origin ozellik/YeniOzellik`).
-5.  Bir Pull Request (PR) oluşturun.
+### 1. 🏠 Ana Sayfa (Vitrin)
 
-## 📄 Lisans
 
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+![Ana Sayfa Görünümü](screenshots/anasayfa.png)
+
+![Ana Sayfa Görünümü](screenshots/anasayfa2.png)
+
+![Ana Sayfa Görünümü](screenshots/anasayfa3.png)
+
+![Ana Sayfa Görünümü](screenshots/anasayfa4.png)
+
+
+### 2. 🛠️ Admin Paneli
+Sitenin tüm yönetiminin yapıldığı, detaylı yetkilere sahip yönetim merkezi.
+
+![Admin Paneli Görünümü](screenshots/admin1.png)
+
+![Admin Paneli Görünümü](screenshots/admin2.png)
+
+![Admin Paneli Görünümü](screenshots/admin3.png)
+
+![Admin Paneli Görünümü](screenshots/admin4.png)
+
