@@ -77,7 +77,7 @@ Bu projenin geliştirilmesindeki katkıları ve rehberliği için **Murat Yüced
 ### 1. 🏠 Ana Sayfa (Vitrin)
 
 
-![Ana Sayfa Görünümü](screenshots/anasayfa.png)
+![Ana Sayfa Görünümü](screenshots/anasayfa1.png)
 
 ![Ana Sayfa Görünümü](screenshots/anasayfa2.png)
 
