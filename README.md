@@ -1,4 +1,12 @@
-# Asp.Net Core ile Dinamik MyPortfolio Sitem
+![.NET](https://img.shields.io/badge/.NET-6.0-512BD4?logo=dotnet&logoColor=white)
+![Framework](https://img.shields.io/badge/Framework-ASP.NET%20Core%20MVC-512BD4)
+![Database](https://img.shields.io/badge/Database-MSSQL-CC2927?logo=microsoft-sql-server&logoColor=white)
+![ORM](https://img.shields.io/badge/ORM-EF%20Core%20(Code%20First)-blue)
+![Frontend](https://img.shields.io/badge/Frontend-Bootstrap%20%26%20HTML5-7952B3?logo=bootstrap&logoColor=white)
+![Validation](https://img.shields.io/badge/Library-FluentValidation-brightgreen)
+![Notifications](https://img.shields.io/badge/UI-SweetAlert%20%2F%20Toastr-orange)
+
+# Asp.Net Core 6.0 ile Dinamik MyPortfolio Sitem
 
 MyPortfolio, yeteneklerinizi, deneyimlerinizi ve projelerinizi sergileyebileceğiniz, aynı zamanda dinamik bir yönetim paneli içeren, **ASP.NET Core 6.0** ile geliştirilmiş kapsamlı bir kişisel portföy web uygulamasıdır.
 
